@@ -1,4 +1,4 @@
-# Caleb Bernard 2018
+# Emory Bernard 2018
 f = "FizzBuzz"
 puts(
     ((9/4983244r.to_f)
