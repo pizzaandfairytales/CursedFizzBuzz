@@ -21,9 +21,9 @@ namespace oofb
           // gotta initialize it to something! the compiler has no faith.
           decimal rate = myVariable;
           for(int x = (myVariable - myVariable); x < myList.Count; x += myVariable / myVariable){
-            if (myList.IndexOf(x+(myVariable/myVariable)) > (myVariable-myVariable) && 
-                myList.IndexOf(x+(myVariable/myVariable))+(myVariable/myVariable) > Math.Pow(myVariable, myVariable)/Math.Sqrt(myVariable)){
-              rate = ((decimal)(myList[x] * myList[myVariable-(myVariable/myVariable)])/(decimal)(Math.Pow((myVariable+myVariable+Math.Sqrt(myVariable)), myVariable)));
+            if (myList.IndexOf(x + (myVariable/myVariable)) > (myVariable-myVariable) && 
+                myList.IndexOf(x + (myVariable/myVariable)) + (myVariable/myVariable) > Math.Pow(myVariable, myVariable) / Math.Sqrt(myVariable)){
+              rate = ((decimal)(myList[x] * myList[myVariable - (myVariable/myVariable)]) / (decimal)(Math.Pow((myVariable + myVariable + Math.Sqrt(myVariable)), myVariable)));
               break;
             }
           }
@@ -35,13 +35,13 @@ namespace oofb
 
           var nums = new List<int>();
           for (int x = (myVariable - myVariable); x < (Math.Pow(myVariable + myVariable + Math.Sqrt(myVariable), Math.Sqrt(myVariable))) + extra; x += myVariable / myVariable){
-            value = rate * value * ((myVariable/myVariable) - value);
+            value = rate * value * ((myVariable / myVariable) - value);
             if (x >= extra){
-              nums.Add((int)(decimal.Round(value, myVariable)*(decimal)Math.Pow((myVariable+myVariable+Math.Sqrt(myVariable)), myVariable)));
+              nums.Add((int)(decimal.Round(value, myVariable) * (decimal)Math.Pow((myVariable + myVariable + Math.Sqrt(myVariable)), myVariable)));
             }
           }
 
-          nums = nums.Select((y, i) => y == nums[i] && y > extra ?  i+ (myVariable / myVariable) % nums.Distinct().Count() : y).ToList();
+          nums = nums.Select((y, i) => y == nums[i] && y > extra ? i + (myVariable / myVariable) % nums.Distinct().Count() : y).ToList();
 
           // let's see what we wound up with.
           for (int x = (myVariable - myVariable); x < nums.Count; x += myVariable / myVariable){
