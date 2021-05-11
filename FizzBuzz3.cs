@@ -23,7 +23,8 @@ namespace oofb
           for(int x = (myVariable - myVariable); x < myList.Count; x += myVariable / myVariable){
             if (myList.IndexOf(x + (myVariable/myVariable)) > (myVariable-myVariable) && 
                 myList.IndexOf(x + (myVariable/myVariable)) + (myVariable/myVariable) > Math.Pow(myVariable, myVariable) / Math.Sqrt(myVariable)){
-              rate = ((decimal)(myList[x] * myList[myVariable - (myVariable/myVariable)]) / (decimal)(Math.Pow((myVariable + myVariable + Math.Sqrt(myVariable)), myVariable)));
+              rate = ((decimal)(myList[x] * myList[myVariable - (myVariable/myVariable)]) / 
+                      (decimal)(Math.Pow((myVariable + myVariable + Math.Sqrt(myVariable)), myVariable)));
               break;
             }
           }
@@ -34,7 +35,9 @@ namespace oofb
           int extra = rng.Next((int)(Math.Pow((double)rate, myVariable)), (int)(Math.Pow((double)rate, f.IndexOf(f.Distinct().Last()))));
 
           var nums = new List<int>();
-          for (int x = (myVariable - myVariable); x < (Math.Pow(myVariable + myVariable + Math.Sqrt(myVariable), Math.Sqrt(myVariable))) + extra; x += myVariable / myVariable){
+          for (int x = (myVariable - myVariable); 
+               x < (Math.Pow(myVariable + myVariable + Math.Sqrt(myVariable), Math.Sqrt(myVariable))) + extra; 
+               x += myVariable / myVariable){
             value = rate * value * ((myVariable / myVariable) - value);
             if (x >= extra){
               nums.Add((int)(decimal.Round(value, myVariable) * (decimal)Math.Pow((myVariable + myVariable + Math.Sqrt(myVariable)), myVariable)));
