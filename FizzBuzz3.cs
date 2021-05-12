@@ -11,7 +11,7 @@ namespace fb
         static void Main()
         {
           // our only constant.
-          string f = "FizzBuzz";
+          const string f = "FizzBuzz";
           var myVariable = f.Distinct().ToList().IndexOf(f.Distinct().Last());
           var myList = Enumerable.Range((int)Math.Sqrt(myVariable), (int)(Math.Pow(myVariable, myVariable) * Math.Pow(myVariable, myVariable)))
                                  .Where(x => Enumerable.Range((int)Math.Sqrt(myVariable), (int)Math.Sqrt(x) - (myVariable/myVariable))
@@ -38,8 +38,10 @@ namespace fb
           for (int x = (myVariable - myVariable); 
                x < (Math.Pow(myVariable + myVariable + Math.Sqrt(myVariable), Math.Sqrt(myVariable))) + extra; 
                x += myVariable / myVariable){
+            // value is a random double, so who knows what this works out to!
             value = rate * value * ((myVariable / myVariable) - value);
             if (x >= extra){
+              // let it loop a random number of times, then start paying attention.
               nums.Add((int)(decimal.Round(value, myVariable) * (decimal)Math.Pow((myVariable + myVariable + Math.Sqrt(myVariable)), myVariable)));
             }
           }
@@ -58,6 +60,7 @@ namespace fb
             if (res == ""){
               res = (x + myVariable / myVariable).ToString();
             }
+            // hopefully fizzbuzz??
             Console.WriteLine(res);
           }
 
