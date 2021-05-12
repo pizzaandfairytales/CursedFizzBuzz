@@ -10,7 +10,7 @@ namespace fb
     {
         static void Main()
         {
-          // our only constant.
+          // our only literal.
           const string f = "FizzBuzz";
           var myVariable = f.Distinct().ToList().IndexOf(f.Distinct().Last());
           var myList = Enumerable.Range((int)Math.Sqrt(myVariable), (int)(Math.Pow(myVariable, myVariable) * Math.Pow(myVariable, myVariable)))
