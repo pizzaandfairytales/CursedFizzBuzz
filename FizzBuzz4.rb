@@ -30,8 +30,12 @@ To put it mildly, the ovum of our husbands' babble is all the blundered downturn
 I am disabused of the neural palaver of my avuncular audience.
 The beauty of the nuclear is, it's potent - so it is universally for the blindest of knights.
 But in lieu of the blowup, we are all in limbo."
-  .downcase.gsub(/[\W&&[^\s]]/, "").split(/\s/).select{ |x| x.length > 3 }
-  .join.chars.select.with_index { |_, i| i % 3 == 0 }
-  .map { |x| "0123456789abcdef"[("a".."z")
-    .select{ |x| "cfjkqvwxyz".index(x) == nil }.shuffle(random: rng).find_index(x)] }
-  .each_slice(2).map { |x| x.join.hex.chr }.join)
+  .downcase
+  .gsub(/[\W&&[^\s]]|\b\w{,3}\b/,"")
+  .gsub(/\s|/,"")
+  .gsub(/(.)../,'\1')
+  .chars
+  .map { |x| "0123456789abcdef"["abdeghilmnoprstu".chars.shuffle(random: rng).index(x)]}
+  .each_slice(2)
+  .map { |x| x.join.hex.chr }
+  .join)
