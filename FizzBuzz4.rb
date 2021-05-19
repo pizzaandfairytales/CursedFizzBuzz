@@ -1,7 +1,7 @@
 require "zlib"
 rng = Random.new(10)
-
-poem = "It's a double bonanza for the quick pistols of a twilight riot.
+puts Zlib::Inflate.inflate(
+"It's a double bonanza for the quick pistols of a twilight riot.
 On his deathbed, he saw him vs. the outlaw was blatantly arrogance. 
 A decade of pushing comestibles to the loci all of it was bound, all to be got rid of.
 He had a pallid hue, and he got into a coughing fit - he was unwell.
@@ -30,5 +30,8 @@ To put it mildly, the ovum of our husbands' babble is all the blundered downturn
 I am disabused of the neural palaver of my avuncular audience.
 The beauty of the nuclear is, it's potent - so it is universally for the blindest of knights.
 But in lieu of the blowup, we are all in limbo."
-
-puts Zlib::Inflate.inflate(poem.downcase.gsub(/[\W&&[^\s]]/, "").split(" ").select{ |x| x.length > 3 }.join.gsub(/\s/, "").chars.select.with_index { |_, i| i % 3 == 0 }.join.chars.map { |x| "0123456789abcdef"[("a".."z").to_a.select{ |x| "cfjkqvwxyz".chars.find_index(x) == nil }.shuffle(random: rng).find_index(x)] }.join.scan(/../).map { |x| x.hex.chr }.join)
+  .downcase.gsub(/[\W&&[^\s]]/, "").split(/\s/).select{ |x| x.length > 3 }
+  .join.chars.select.with_index { |_, i| i % 3 == 0 }
+  .map { |x| "0123456789abcdef"[("a".."z")
+    .select{ |x| "cfjkqvwxyz".index(x) == nil }.shuffle(random: rng).find_index(x)] }
+  .each_slice(2).map { |x| x.join.hex.chr }.join)
