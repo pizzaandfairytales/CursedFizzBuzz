@@ -16,7 +16,6 @@ while permutations < 1
   rng = Random.new(seed)
   permutations += 1
   alpha = readable.chars.map { |x| ("a".."z").to_a.select{ |x| "cfjkqvwxyz".scan(/./).find_index(x) == nil }.shuffle(random: rng)[hex.chars.find_index(x)] }.join
-  #letter_data = "lmnrgsruenataeecaraerantpusciccstsciungpnolginuiuhaniracrproegasicigmctduhptiuemottuuusmenhcdltrgotghrrgdaptteonaenduesdegoraoehcoslnmptoausmrnpramieipidsicorpplrrtltaidlssaeetpopeptcgmpuhehuododrsdgecaoealtpncamsileutntmidgesaeenlopdhtmoidpsgiougdncstmdctpshntuggpeutaenslhlamu"
   data_interval = 3
   regex = alpha.chars.map { |x| x.to_s + ".." }.join
 
@@ -88,6 +87,4 @@ while permutations < 1
     optionsfile = File.open("choices.txt", "w")
     options.each { |x| optionsfile.write(x); optionsfile.write("\n") }
   end
-  
-  
 end
