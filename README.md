@@ -1,1 +1,1 @@
-# FizzBuzzTricks
+# CursedFizzBuzz
